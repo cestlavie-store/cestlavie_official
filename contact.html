@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Contact</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+ </head>
+  <body>
+	<!----start-header----->
+	 <div class="header">
+	     <div class="wrap">
+			<div class="top-header">
+				<div class="logo">
+
+               
+			<a href="index.html"><img src="images/store logo.png" title="logo" /></a>
+				
+                
+              </div>
+                                <div class="footer-grid">
+                </div>
+				<div class="social-icons">
+					<ul>
+						<li><a href="https://m.facebook.com/profile.php?id=100023998843345&refsrc=http%3A%2F%2Fyaozhila.wixsite.com%2Fyaozhilan&_rdr"><img src="images/facebook.png" title="facebook" /></a></li>
+						<li><a href="https://twitter.com/AmberYao4"><img src="images/twitter.png" title="twitter" /></a></li>
+						<li><a href="https://instagram.com/amberrrr_0223?r=nametag"><img src="images/ins.png" width="31" height="30" title="google pluse" /></a></li>
+                        <li><a href="https://www.linkedin.com/in/zhilan-yao-849629148/"><img src="images/Linkedln.png" title="google pluse" /></a></li>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<!---start-top-nav---->
+			<div class="top-nav">
+				<div class="top-nav-left">
+					<ul>
+					  <li><a href="index.html">Home</a></li>
+						<li><a href="menu.html">C'est la vie</a>
+						<li><a href="about.html">About</a></li>
+						<li class="active"><a href="contact.html">Contact</a></li>
+						<div class="clear"> </div>
+					</ul>
+				</div>
+				<div class="top-nav-right">
+					<form>
+						<input type="text"><input type="submit" value="" />
+					</form>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<!---End-top-nav---->
+		</div>
+	</div>
+   <!----End-header----->
+		 <!---start-content---->
+		 <div class="content">
+		 	<!---start-contact---->
+		 	<div class="contact">
+		 		<div class="wrap">
+				<div class="section group">				
+				<div class="col span_1_of_3">
+					<div class="contact_info">
+			    	 	<h3>Find Us Here</h3>
+			    	 		<div class="map">
+			   			    <img src="images/current adress.jpg" alt="" width="709" height="350"/> </div>
+      				</div>
+      			<div class="company_address">
+				     	<h3>Information :</h3>
+                       			<p>Current location </p>
+                        		<p>188 Jiefangxi Rd, </p>
+						    	<p>Furong District, </p>
+						   		<p>Changsha, Hunan,</p>
+						   		<p>China</p>
+				   	
+		 	 	  <p>Email: <span><a href="#">yaozhilan02@163.com</span></a></p>
+				   		
+			      </div>
+				</div>				
+				<div class="col span_2_of_3">
+				  <div class="contact-form">
+				  	<h3>Contact Us</h3>
+					    <form method="post" action="contact-post.html" id="content">
+					    	<div>
+						    	<span><label>NAME</label></span>
+						    	<span><input name="userName" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>E-MAIL</label></span>
+						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						     	<span><label>MOBILE</label></span>
+						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>SUBJECT</label></span>
+						    	<span><textarea name="userMsg"> </textarea></span>
+						    </div>
+						   <div>
+						   		<span><input type="button" class="mybutton" value="Submit" id="submit"></span>
+						  </div>
+					    </form>
+
+				    </div>
+  				</div>				
+			  </div>
+			</div>
+			</div>
+		 	<!---End-contact---->
+		 <!---End-content---->
+		 <!---start-footer---->
+         		 <div class="footer">
+		   <div class="clear"> 
+           </div>
+	</div>
+    <div class="copy-right">
+      <p>Copyright &copy; 2021 C'est la vie all rights reserved</p>
+  </div>
+		 <!---End-footer---->
+<script src="js/jquery.min.js"></script>
+<script>
+	$("#submit").on("click",function(){
+		var obj = $("#content").serialize();
+		$.ajax({
+			type:"post",						
+			url:"https://formspree.io/f/mwkaodez", 
+			async:true,
+			data:obj,            									
+			dataType:"json",
+		});
+		alert('邮件已发送!!!');  
+	})
+</script>
+</body>
+</html>
+
